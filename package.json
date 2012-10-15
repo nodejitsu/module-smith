@@ -12,8 +12,10 @@
     "semver": "~1.1.0",
     "merge-recursive": "~0.0.3",
     "tar": "~0.1.13",
-    "understudy": "~0.1.1",
-    "uid-number": "~0.0.3"
+    "understudy": "~1.0.1",
+    "uid-number": "~0.0.3",
+    "mkdirp": "~0.3.4",
+    "suspawn": "~0.1.1"
   },
   "devDependencies": {
     "tmp": "~0.0.15"

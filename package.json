@@ -1,0 +1,34 @@
+{
+  "name": "module-smith",
+  "version": "0.0.0",
+  "description": "Build Bot for Node JS",
+  "main": "lib/builder.js",
+  "dependencies": {
+    "async": "~0.1.22",
+    "buffered": "~0.0.1",
+    "checkout": "~0.0.0",
+    "chownr": "~0.0.1",
+    "fstream": "~0.1.19",
+    "semver": "~1.1.0",
+    "merge-recursive": "~0.0.3",
+    "tar": "~0.1.13",
+    "understudy": "~0.1.1",
+    "uid-number": "~0.0.3"
+  },
+  "devDependencies": {
+    "tmp": "~0.0.15"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nodejitsu/module-smith"
+  },
+  "keywords": [
+    "npm",
+    "buildserver"
+  ],
+  "author": "info@nodejitsu.com",
+  "license": "MIT"
+}

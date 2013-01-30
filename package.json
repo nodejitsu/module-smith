@@ -1,6 +1,6 @@
 {
   "name": "module-smith",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Build Bot for Node JS",
   "main": "lib/builder.js",
   "dependencies": {
@@ -12,7 +12,7 @@
     "semver": "~1.1.0",
     "merge-recursive": "~0.0.3",
     "tar": "~0.1.13",
-    "understudy": "~1.0.1",
+    "understudy": "~1.1.0",
     "uid-number": "~0.0.3",
     "mkdirp": "~0.3.4",
     "suspawn": "~0.1.1"

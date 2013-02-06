@@ -31,6 +31,6 @@
     "npm",
     "buildserver"
   ],
-  "author": "info@nodejitsu.com",
+  "author": "Nodejitsu Inc <info@nodejitsu.com>",
   "license": "MIT"
 }

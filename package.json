@@ -1,6 +1,6 @@
 {
   "name": "module-smith",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Build Bot for Node JS",
   "main": "lib/builder.js",
   "dependencies": {

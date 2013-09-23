@@ -27,7 +27,7 @@ tmp.dir(function (err, tmpdir) {
       url: 'git@github.com:bmeck/bcrypt-example.git'
     },
     directories: {
-      rootdir: tmpdir
+      root: tmpdir
     }
   }, function (err, stream) {
     assert.ifError(err);
@@ -63,7 +63,33 @@ Runs a build
 
 ### BuildDescription
 
+``` js
+{
+  uid: 'nobody',
+  gid: 'nobody',
+  command: 'install',
+  env: {
+    'npm_config_registry': 'http://registry.npmjs.org',
+    'npm_config_nodedir':  path.join(process.env.HOME, '.node-gyp')
+  },
+  repository: {
+    type: 'git',
+    url: 'git@github.com:bmeck/bcrypt-example.git'
+  },
+  directories: {
+    root: '/path/to/build/output/root'
+  }
+}
+```
+
 A build description enumerates a number of values
+
+#### BuildDescription.command
+
+The `npm` command that you wish to execute for the build. Can be:
+
+* `install`: Installs all module dependencies.
+* `build`: Runs `node-gyp` to build any binary dependencies.
 
 #### BuildDescription.env
 
@@ -91,12 +117,11 @@ Some interesting fields are:
 
 * engines.node - version to spawn as
 
-
 #### BuildDescription.repository
 
-A `checkout` npm module repository to download wbefore building.
+A `checkout` npm module repository to download before building.
 
-#### BuildDescription.directories.rootdir
+#### BuildDescription.directories.root
 
 The place to use for creating the build.
 

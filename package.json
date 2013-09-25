@@ -6,7 +6,7 @@
   "dependencies": {
     "async": "~0.1.22",
     "buffered": "~0.0.1",
-    "checkout": "~0.0.0",
+    "checkout": "~1.0.0",
     "chownr": "~0.0.1",
     "fstream": "~0.1.19",
     "merge-recursive": "~0.0.3",

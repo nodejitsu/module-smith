@@ -5,7 +5,7 @@
   "main": "lib/builder.js",
   "dependencies": {
     "async": "~0.1.22",
-    "buffered": "~0.0.1",
+    "bl": "~0.4.1",
     "checkout": "~1.0.0",
     "chownr": "~0.0.1",
     "fstream": "~0.1.19",

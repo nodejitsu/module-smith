@@ -1,41 +1,41 @@
 # Module Smith
 
-A simple extensible NPM build bot.
+A simple extensible `npm` build bot.
 
 ## Example
 
 Given a small script for building a specific module:
 
-```javascript
-var tmp = require('tmp');
-var assert = require('assert');
+``` js
+var assert = require('assert'),
+    tmp = require('tmp'),
+    ModuleSmith = require('module-smith');
 
-var ModuleSmith = require('module-smith');
 var buildbot = ModuleSmith.createModuleSmith();
 
 //
 // Grab a temporary directory to build in
 //
 tmp.dir(function (err, tmpdir) {
-   assert.ifError(err);
-   //
-   // Start our build
-   //
-   buildbot.build({
-      repository: {
-         type: 'git',
-         url: 'git@github.com:bmeck/bcrypt-example.git'
-      },
-      directories: {
-         rootdir: tmpdir
-      }
-   }, function (err, stream) {
-      assert.ifError(err);
-      //
-      // Pipe out the data to stdio
-      //
-      stream.pipe(process.stdout);
-   });
+  assert.ifError(err);
+  //
+  // Start our build
+  //
+  buildbot.build({
+    repository: {
+      type: 'git',
+      url: 'git@github.com:bmeck/bcrypt-example.git'
+    },
+    directories: {
+      root: tmpdir
+    }
+  }, function (err, stream) {
+    assert.ifError(err);
+    //
+    // Pipe out the data to stdio
+    //
+    stream.pipe(process.stdout);
+  });
 });
 ```
 
@@ -63,7 +63,33 @@ Runs a build
 
 ### BuildDescription
 
+``` js
+{
+  uid: 'nobody',
+  gid: 'nobody',
+  command: 'install',
+  env: {
+    'npm_config_registry': 'http://registry.npmjs.org',
+    'npm_config_nodedir':  path.join(process.env.HOME, '.node-gyp')
+  },
+  repository: {
+    type: 'git',
+    url: 'git@github.com:bmeck/bcrypt-example.git'
+  },
+  directories: {
+    root: '/path/to/build/output/root'
+  }
+}
+```
+
 A build description enumerates a number of values
+
+#### BuildDescription.command
+
+The `npm` command that you wish to execute for the build. Can be:
+
+* `install`: Installs all module dependencies.
+* `build`: Runs `node-gyp` to build any binary dependencies.
 
 #### BuildDescription.env
 
@@ -82,7 +108,7 @@ Optional user to spawn `npm` as.
 
 Optional group to spawn `npm` under.
 
-#### BuildDescription.packageJSON
+#### BuildDescription.package
 
 Optional package.json overrides.
 Can be extended easily from the repository during `npm.configure`.
@@ -91,12 +117,11 @@ Some interesting fields are:
 
 * engines.node - version to spawn as
 
-
 #### BuildDescription.repository
 
-A `checkout` npm module repository to download wbefore building.
+A `checkout` npm module repository to download before building.
 
-#### BuildDescription.directories.rootdir
+#### BuildDescription.directories.root
 
 The place to use for creating the build.
 
@@ -108,7 +133,7 @@ Extensibility for complex actions can be done via Understudy based actions, only
 
 ### npm.configure (buildDescription)
 
-### npm.package (buildDescription, packageJSON)
+### npm.package (buildDescription, package)
 
 ## Events
 

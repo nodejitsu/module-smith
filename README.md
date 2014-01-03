@@ -1,6 +1,8 @@
 # Module Smith
 
-A simple extensible `npm` build bot.
+![](https://i.cloudup.com/YjjosQY66o-3000x3000.png)
+
+A simple extensible `npm` build bot that works on Linux, SmartOS, and Windows.
 
 ## Example
 
@@ -49,13 +51,8 @@ node build.js > built.tgz
 
 ### ModuleSmith.createModuleSmith(options)
 
-#### String[] options.versions
-
-List of the versions supported with absolute version numbers like ie. '0.8.12'
-
-#### BuildDescription options.defaults
-
-The defaults for a build run using this ModuleSmith.
+* `Array` _options.versions_: List of the versions supported with absolute version numbers like ie. '0.8.12'
+* `BuildDescription` _options.defaults_: The defaults for a build run using this ModuleSmith.
 
 ### ModuleSmith.build(buildDescription, callback(err, tgzStream))
 
@@ -129,16 +126,20 @@ The place to use for creating the build.
 
 Extensibility for complex actions can be done via Understudy based actions, only `before` actions are supported.
 
-### build.configure (buildDescription)
-
-### npm.configure (buildDescription)
-
-### npm.package (buildDescription, package)
+* build.configure (buildDescription)
+* npm.configure (buildDescription)
+* npm.package (buildDescription, package)
+* build.output (buildDescription, tgzStream)
 
 ## Events
 
 Notifications of actions that have been completed are available via the EventEmitter APIs.
 
-### npm.spawned (buildDescription, npmProcess)
+* npm.spawned (buildDescription, npmProcess)
 
-### build.output (buildDescription, tgzStream)
+<hr>
+#### Copyright (C) 2012 Nodejitsu Inc.
+#### Contributors: [Bradley Meck](https://github.com/bmeck), [Charlie Robbins](https://github.com/indexzero)
+#### License: MIT
+
+_Factory Icon by Lil Squid from The Noun Project_

@@ -142,4 +142,4 @@ Notifications of actions that have been completed are available via the EventEmi
 #### Contributors: [Bradley Meck](https://github.com/bmeck), [Charlie Robbins](https://github.com/indexzero)
 #### License: MIT
 
-_Factory Icon by Lil Squid from The Noun Project_
+_Hammer Icon by Edward Boatman from The Noun Project_

@@ -4,17 +4,17 @@
   "description": "Build Bot for Node JS",
   "main": "lib/builder.js",
   "dependencies": {
-    "async": "~0.2.9",
+    "async": "~0.9.0",
     "buffered": "~0.0.1",
     "checkout": "~1.0.1",
     "chownr": "~0.0.1",
-    "fstream": "~0.1.25",
+    "fstream": "~1.0.2",
     "merge-recursive": "~0.0.3",
-    "mkdirp": "~0.3.5",
-    "rimraf": "~2.2.4",
-    "semver": "~2.2.1",
-    "suspawn": "~0.1.1",
-    "tar": "~0.1.18",
+    "mkdirp": "~0.5.0",
+    "rimraf": "~2.2.8",
+    "semver": "~4.1.0",
+    "suspawn": "~0.2.1",
+    "tar": "~1.0.2",
     "understudy": "~1.1.0",
     "uid-number": "~0.0.3"
   },
@@ -29,6 +29,12 @@
     "npm",
     "buildserver"
   ],
-  "author": "Nodejitsu Inc <info@nodejitsu.com>",
+  "author": "Bradley Meck <bradley.meck@gmail.com>",
+  "contributors": [
+    {
+      "name": "Charlie Robbins",
+      "email": "charlie.robbins@gmail.com"
+    }
+  ],
   "license": "MIT"
 }

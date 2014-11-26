@@ -1,7 +1,7 @@
 /*
  * bcrypt.js: Example that builds bcrypt.
  *
- * (C) 2012 Nodejitsu Inc.
+ * (C) 2012 Charlie Robbins, Bradley Meck and the Contributors
  *
  */
 

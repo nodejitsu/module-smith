@@ -138,8 +138,8 @@ Notifications of actions that have been completed are available via the EventEmi
 * npm.spawned (buildDescription, npmProcess)
 
 <hr>
-#### Copyright (C) 2012 Nodejitsu Inc.
-#### Contributors: [Bradley Meck](https://github.com/bmeck), [Charlie Robbins](https://github.com/indexzero)
+#### Copyright (C) Charlie Robbins, Bradley Meck and the Contributors
+#### Authors: [Bradley Meck](https://github.com/bmeck), [Charlie Robbins](https://github.com/indexzero)
 #### License: MIT
 
 _Hammer Icon by Edward Boatman from The Noun Project_
